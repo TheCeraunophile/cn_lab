@@ -1,0 +1,7 @@
+en
+conf t
+router eigrp 30
+network 0.0.0.0
+no auto-summary
+end
+

@@ -1,0 +1,10 @@
+int fa0/0 
+ip nat inside
+exit
+int se2/0 
+ip nat outside
+exit
+ip nat pool mypool 7.7.7.1 7.7.7.5 netmask 255.255.255.0
+access-list 1 permit 192.168.1.0 0.0.0.255
+ip nat inside source list 1 pool mypool
+

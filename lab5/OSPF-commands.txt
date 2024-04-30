@@ -1,0 +1,8 @@
+en
+conf t
+router ospf 30
+network ip-network netmask area 0
+network ip-network netmask area 0
+network ip-network netmask area 0
+end
+
