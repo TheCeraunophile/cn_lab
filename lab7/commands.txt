@@ -1,0 +1,35 @@
+Router en
+Router # conf t
+
+Router(config)# interface fa0/1
+
+Router(config-if)# no ip address
+
+Router(config-if)# no shutdown
+
+Router(config)# interface fa0/1.10
+
+Router(config-subif)# encapsulation dot1Q 10
+
+Router(config-subif)#ip address 192.168.1.40 255.255.255.0
+
+Router(config-subif)#exit
+
+Router(config)# interface fa0/1.20
+
+Router(config-subif)# encapsulation dot1Q 20
+
+Router(config-subif)# ip address 192.168.2.40 255.255.255.0 
+
+Router(config-subif)#exit
+
+Router(config)# interface fa0/1.30
+
+Router(config-subif)# encapsulation dot1Q 30
+
+Router(config-subif)# ip address 192.168.3.40 255.255.255.0 
+
+Router(config-subif)# exit
+
+Router # show vlan brief
+
